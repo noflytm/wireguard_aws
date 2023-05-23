@@ -1,9 +1,9 @@
 #!/bin/bash
 
-apt install software-properties-common -y
-add-apt-repository ppa:wireguard/wireguard -y
-apt update
-apt install wireguard-dkms wireguard-tools qrencode -y
+#apt install software-properties-common -y
+#add-apt-repository ppa:wireguard/wireguard -y
+#apt update
+#apt install wireguard-dkms wireguard-tools qrencode -y
 
 
 NET_FORWARD="net.ipv4.ip_forward=1"
@@ -70,4 +70,4 @@ done
 
 cp -f ./wg0.conf.def ./wg0.conf
 
-systemctl enable wg-quick@wg0
+service wg-quick@wg0 start
